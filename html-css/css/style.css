@@ -1,0 +1,223 @@
+@import url("./reset.css");
+
+:root {
+    --base: "Rubik", sans-serif;
+
+    --primary: rgb(36, 41, 70);
+    --secondary: rgb(201, 201, 207);
+    --white: #fff;
+    --blue: rgb(80, 102, 223);
+    --gray: rgb(247, 247, 247);
+    --red: rgb(251, 88, 89);
+    --border-radius: 6px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--base);
+    color: var(--primary);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 300;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    background: var(--blue);
+    color: var(--white);
+    max-width: 45%;
+    font-size: 1.5rem;
+}
+
+.button--primary {
+    background: var(--gray);
+    color: var(--primary);
+}
+
+.button--secondary {
+    background: var(--red);
+    color: var(--white);
+    border: 1px solid var(--secondary);
+}
+
+/* @media screen and (min-width: 768px) {
+    .button {
+
+    }
+} */
+
+.header {
+    background: var(--white);
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo img {
+    height: 24px;
+}
+
+.header__nav {
+    display: none;
+}
+
+.header__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__toggle img {
+    width: 20px;
+    height: 20px;
+}
+
+.bookmark {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+}
+.bookmark__image img {
+    max-width: 100%;
+}
+.bookmark__title {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.bookmark__description {
+    margin: 1rem 2rem;
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+.bookmark__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .bookmark {
+        flex-direction: row-reverse;
+    }
+    .bookmark__image,
+    .bookmark__content {
+        max-width: 50%;
+    }
+}
+
+.features {
+    padding: 2rem 1.5rem;
+}
+.features__title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+.features__description {
+    text-align: center;
+    color: var(--secondary);
+    margin: 1rem 2rem;
+    font-size: 1.5rem;
+}
+.features__tabs {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.features__tab {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 0.25rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+.features__tab--active {
+    font-weight: 500;
+}
+.features__tab--active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 2px;
+}
+.features__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+.features__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+.features__subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.features__text {
+    color: var(--secondary);
+    max-width: 300px;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+}
+
+.features__button {
+    display: none;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .features__tabs {
+        flex-direction: row;
+    }
+    .features__button {
+        display: flex;
+        justify-content: center;
+    }
+    .features__content {
+        flex-direction: row;
+    }
+    .features__image,
+    .features__info {
+        max-width: 50%;
+        justify-content: space-around;
+        margin: 1rem 1rem;
+    }
+}

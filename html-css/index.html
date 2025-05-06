@@ -5,156 +5,176 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sprint 1</title>
-	<link rel="stylesheet" href="style.css">
+	<!-- <link rel="stylesheet" href="./css/reset.css"> -->
+	<link rel="stylesheet" href="./css/style.css">
 	<link rel="shortcut icon" href="/html-css/img/favicon-32x32.png" type="image/x-icon">
 </head>
 
 <body>
-	<header>
-		<div>
-			<h1>Bookmark</h1>
-		</div>
-		<nav>
-			<ul>
-				<li>features</li>
-				<li>pricing</li>
-				<li>contact</li>
-				<li>login</li>
-
-			</ul>
-
-		</nav>
-		<div>
-			<ul>
-				<li>I</li>
-				<li>T</li>
-			</ul>
+	<header class="header">
+		<div class="header__inner">
+			<a href="#" class="header__logo">
+				<img src="./img/logo-bookmark.svg" alt="Bookmark logo">
+			</a>
+			<nav class="header__nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#" class="nav__link">Features</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Pricing</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+					<li class="nav__item"><a href="#" class="nav__link nav__link--button">Login</a></li>
+				</ul>
+			</nav>
+			<button class="header__toggle" aria-label="Open menu">
+				<img src="./img/icon-hamburger.svg" alt="Menu">
+			</button>
 		</div>
 	</header>
-	<section>
-		<article>
-			<h2>A Single Bookmark Manager</h2>
-			<p>A clean and simple interface to organize your favorite websites. Open a new browser tab and see your
-				sites load instantly, Try it for free.</p>
-			<span>
-				<button>Get it on Chrome</button>
-				<button>Get it on Firefox</button>
-			</span>
-		</article>
-		<article>
-			<img src="./img/illustration-hero.svg" alt="image-screen-preview">
-		</article>
-	</section>
-	<section>
-		<article>
-			<h2>Features</h2>
-			<p>Our aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sync
-				between your devices so you can access them on the go.</p>
-			<ul>
-				<li>Simple Bookmarking</li>
-				<li>Speedy Searching</li>
-				<li>Easy Sharing</li>
-			</ul>
 
-		</article>
-		<article>
-			<div>
-				<img src="./img/illustration-features-tab-1.svg" alt="image-tab-1">
-			</div>
-			<div>
+	<main>
+		<section class="bookmark">
+			<article class="bookmark__image">
 
-				<h3>Bookmark in one click</h3>
-				<p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete
-					control over how you manage your favorite sites.</p>
-				</dic>
+				<img src="./img/illustration-hero.svg" alt="image-screen-preview">
 
-		</article>
-		<article>
-			<div>
-				<img src="./img/illustration-features-tab-2.svg" alt="image-tab-1">
+			</article>
+			<article class="bookmark__content">
+				<h1 class="bookmark__title">A Single Bookmark Manager</h1>
+				<p class="bookmark__description">A clean and simple interface to organize your favorite websites. Open a
+					new browser tab and
+					see your
+					sites load instantly, Try it for free.</p>
+				<span class="bookmark__buttons">
+					<button class="button">Get it on Chrome</button>
+					<button class="button button--primary">Get it on Firefox</button>
+				</span>
+			</article>
+
+		</section>
+		<section class="features">
+			<article class="features__box">
+				<h2 class="features__title">Features</h2>
+				<p class="features__description">Our aim is to make it quick and easy for you to access your favorite
+					websites. Your
+					bookmarks sync
+					between your devices so you can access them on the go.</p>
+				<ul class="features__tabs">
+					<li class="features__tab">Simple Bookmarking</li>
+					<li class="features__tab">Speedy Searching</li>
+					<li class="features__tab">Easy Sharing</li>
+				</ul>
+
+			</article>
+			<article class="features__content">
+				<div class="features__image">
+					<img class="" src="./img/illustration-features-tab-1.svg" alt="image-tab-1">
+				</div>
+				<div class="features__info">
+
+					<h3 class="features__subtitle">Bookmark in one click</h3>
+					<p class="features__text">Organize your bookmarks however you like. Our simple drag-and-drop
+						interface gives you
+						complete
+						control over how you manage your favorite sites.</p>
+					<button class="button features__button">More Info</button>
+				</div>
+			</article>
+			<article class="features__content">
+				<div class="features__image">
+					<img class="" src="./img/illustration-features-tab-2.svg" alt="image-tab-1">
+				</div>
+				<div class="features__info">
+					<h3 class="features__subtitle">Bookmark in one click</h3>
+					<p class="features__text">Organize your bookmarks however you like. Our simple drag-and-drop
+						interface gives you
+						complete
+						control over how you manage your favorite sites.</p>
+					<button class="button features__button">More Info</button>
+				</div>
+			</article>
+			<article class="features__content">
+				<div class="features__image">
+					<img class="" src="./img/illustration-features-tab-3.svg" alt="image-tab-1">
+				</div>
+				<div class="features__info">
+					<h3 class="features__subtitle">Bookmark in one click</h3>
+					<p class="features__text">Organize your bookmarks however you like. Our simple drag-and-drop
+						interface gives you
+						complete
+						control over how you manage your favorite sites.</p>
+					<button class="button features__button">More Info</button>
+				</div>
+			</article>
+		</section>
+		<section class="">
+			<div class="">
+				<h3 class="">Download the extension</h3>
+				<p class="">We've got more browsers in the pipeline. Please do let us know if you've got a favorite
+					you'd like us
+					to
+					priorize.</p>
 			</div>
-			<div>
-				<h3>Bookmark in one click</h3>
-				<p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete
-					control over how you manage your favorite sites.</p>
+			<div class="">
+				<card class="">
+					<img src="./img/logo-chrome.svg" alt="logo-chrome">
+					<h4 class="">Add to Chrome</h4>
+					<p class="">Minimum version 62</p>
+					<button class="button">Add & Install Extension</button>
+				</card>
+				<card class="">
+					<img class="" src="./img/logo-firefox.svg" alt="logo-chrome">
+					<h4 class="">Add to Firefox</h4>
+					<p class="">Minimum version 55</p>
+					<button class="button">Add & Install Extension</button>
+				</card>
+				<card class="">
+					<img class="" src="./img/logo-opera.svg" alt="logo-chrome">
+					<h4 class="">Add to Opera</h4>
+					<p class="">Minimum version 46</p>
+					<button class="button">Add & Install Extension</button>
+				</card>
 			</div>
-		</article>
-		<article>
-			<div>
-				<img src="./img/illustration-features-tab-3.svg" alt="image-tab-1">
+		</section>
+		<section class="">
+			<article class="">
+				<h3 class="">Frequently Asked Questions</h3>
+				<p class="">Here are some of our FAQs. If you have any other questions you'd like answered please feel
+					free to
+					email
+					us. </p>
+			</article>
+			<article class="">
+				<ul class="">
+					<li class="">What is Bookmark?</li>
+					<li class="">How can I request a new browser?</li>
+					<li class="">Is there a mobile app?</li>
+					<li class="">What about other Chromium browsers?</li>
+				</ul>
+			</article>
+			<div class="">
+				<button class="button">More info</button>
 			</div>
-			<div>
-				<h3>Bookmark in one click</h3>
-				<p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete
-					control over how you manage your favorite sites.</p>
-			</div>
-		</article>
-	</section>
-	<section>
-		<div>
-			<h3>Download the extension</h3>
-			<p>We've got more browsers in the pipeline. Please do let us know if you've got a favorite you'd like us to
-				priorize.</p>
-		</div>
-		<div>
-			<card>
-				<img src="./img/logo-chrome.svg" alt="logo-chrome">
-				<h4>Add to Chrome</h4>
-				<p>Minimum version 62</p>
-				<button>Add & Install Extension</button>
-			</card>
-			<card>
-				<img src="./img/logo-firefox.svg" alt="logo-chrome">
-				<h4>Add to Firefox</h4>
-				<p>Minimum version 55</p>
-				<button>Add & Install Extension</button>
-			</card>
-			<card>
-				<img src="./img/logo-opera.svg" alt="logo-chrome">
-				<h4>Add to Opera</h4>
-				<p>Minimum version 46</p>
-				<button>Add & Install Extension</button>
-			</card>
-		</div>
-	</section>
-	<section>
-		<article>
-			<h3>Frequently Asked Questions</h3>
-			<p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email
-				us. </p>
-		</article>
-		<article>
-			<ul>
-				<li>What is Bookmark?</li>
-				<li>How can I request a new browser?</li>
-				<li>Is there a mobile app?</li>
-				<li>What about other Chromium browsers?</li>
-			</ul>
-		</article>
-		<div>
-			<button>More info</button>
-		</div>
-	</section>
-	<section>
-		<h4>35.000+ Already joined</h4>
-		<h3>Stay up-to-date with what we're doing</h3>
-		<textarea name="emailName" id="emailName"></textarea>
-		<button>Contact Us</button>
-	</section>
-	<footer>
-		<div>
-			<h1>Bookmark</h1>
+		</section>
+		<section class="">
+			<h4 class="">35.000+ Already joined</h4>
+			<h3 class="">Stay up-to-date with what we're doing</h3>
+			<textarea class="" name="emailName" id="emailName"></textarea>
+			<button class="button button--secondary">Contact Us</button>
+		</section>
+	</main>
+	<footer class="">
+		<div class="">
+			<h1 class="">Bookmark</h1>
 		</div>
 
-		<ul>
-			<li>features</li>
-			<li>pricing</li>
-			<li>contact</li>
+		<ul class="">
+			<li class="">features</li>
+			<li class="">pricing</li>
+			<li class="">contact</li>
 
 		</ul>
-		<ul>
-			<li>I</li>
-			<li>T</li>
+		<ul class="">
+			<li class="">I</li>
+			<li class="">T</li>
 		</ul>
 	</footer>
 </body>
