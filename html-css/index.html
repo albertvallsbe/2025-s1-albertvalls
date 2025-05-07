@@ -8,15 +8,18 @@
 	<!-- <link rel="stylesheet" href="./css/reset.css"> -->
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="shortcut icon" href="/html-css/img/favicon-32x32.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-	<header class="header">
-		<div class="header__inner">
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+	<header class="header" role="banner">
+		<div class=" container  header__inner">
 			<a href="#" class="header__logo">
 				<img src="./img/logo-bookmark.svg" alt="Bookmark logo">
 			</a>
-			<nav class="header__nav">
+			<nav class="header__nav" aria-label="Main navigation" role="navigation">
 				<ul class="nav__list">
 					<li class="nav__item"><a href="#" class="nav__link">Features</a></li>
 					<li class="nav__item"><a href="#" class="nav__link">Pricing</a></li>
@@ -25,12 +28,13 @@
 				</ul>
 			</nav>
 			<button class="header__toggle" aria-label="Open menu">
+
 				<img src="./img/icon-hamburger.svg" alt="Menu">
 			</button>
 		</div>
 	</header>
 
-	<main>
+	<main id="main-content" role="main">
 		<section class="bookmark">
 			<article class="bookmark__image">
 
@@ -105,78 +109,167 @@
 				</div>
 			</article>
 		</section>
-		<section class="">
-			<div class="">
-				<h3 class="">Download the extension</h3>
-				<p class="">We've got more browsers in the pipeline. Please do let us know if you've got a favorite
-					you'd like us
-					to
-					priorize.</p>
-			</div>
-			<div class="">
-				<card class="">
-					<img src="./img/logo-chrome.svg" alt="logo-chrome">
-					<h4 class="">Add to Chrome</h4>
-					<p class="">Minimum version 62</p>
-					<button class="button">Add & Install Extension</button>
-				</card>
-				<card class="">
-					<img class="" src="./img/logo-firefox.svg" alt="logo-chrome">
-					<h4 class="">Add to Firefox</h4>
-					<p class="">Minimum version 55</p>
-					<button class="button">Add & Install Extension</button>
-				</card>
-				<card class="">
-					<img class="" src="./img/logo-opera.svg" alt="logo-chrome">
-					<h4 class="">Add to Opera</h4>
-					<p class="">Minimum version 46</p>
-					<button class="button">Add & Install Extension</button>
-				</card>
-			</div>
-		</section>
-		<section class="">
-			<article class="">
-				<h3 class="">Frequently Asked Questions</h3>
-				<p class="">Here are some of our FAQs. If you have any other questions you'd like answered please feel
-					free to
-					email
-					us. </p>
-			</article>
-			<article class="">
-				<ul class="">
-					<li class="">What is Bookmark?</li>
-					<li class="">How can I request a new browser?</li>
-					<li class="">Is there a mobile app?</li>
-					<li class="">What about other Chromium browsers?</li>
-				</ul>
-			</article>
-			<div class="">
-				<button class="button">More info</button>
+
+		<section class="download">
+			<div class="container download__inner">
+				<div class="download__header">
+					<h3 class="download__title">Download the extension</h3>
+					<p class="download__description">We've got more browsers in the pipeline. Please do let us know if
+						you've got a favorite
+						you'd like us
+						to
+						priorize.</p>
+				</div>
+				<div class="download__grid">
+					<article class="card">
+						<img src="./img/logo-chrome.svg" alt="logo-chrome">
+						<h4 class="">Add to Chrome</h4>
+						<p class="">Minimum version 62</p>
+						<button class="button">Add & Install Extension</button>
+					</article>
+					<article class="card">
+						<img class="" src="./img/logo-firefox.svg" alt="logo-chrome">
+						<h4 class="">Add to Firefox</h4>
+						<p class="">Minimum version 55</p>
+						<button class="button">Add & Install Extension</button>
+					</article>
+					<article class="card">
+						<img class="" src="./img/logo-opera.svg" alt="logo-chrome">
+						<h4 class="">Add to Opera</h4>
+						<p class="">Minimum version 46</p>
+						<button class="button">Add & Install Extension</button>
+					</article>
+				</div>
 			</div>
 		</section>
-		<section class="">
-			<h4 class="">35.000+ Already joined</h4>
-			<h3 class="">Stay up-to-date with what we're doing</h3>
-			<textarea class="" name="emailName" id="emailName"></textarea>
-			<button class="button button--secondary">Contact Us</button>
+
+		<section class="faq">
+			<div class="container">
+				<article class="faq__intro">
+
+					<h3 class="faq__title">Frequently Asked Questions</h3>
+					<p class="faq__description">Here are some of our FAQs. If you have any other questions you'd like
+						answered please feel
+						free to
+						email
+						us. </p>
+				</article>
+
+
+				<div class="faq__list">
+
+					<div class="faq__item">
+						<button class="faq__question" aria-expanded="false">
+							What is Bookmark?
+							<img class="faq__icon" src="./img/icon-arrow.svg" alt="">
+						</button>
+						<div class="faq__answer">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam asperiores cumque earum
+							temporibus aperiam, natus esse officiis non, sit, quae numquam et? Assumenda recusandae
+							eligendi placeat minima sapiente dolorem dignissimos.
+						</div>
+					</div>
+					<div class="faq__item">
+						<button class="faq__question" aria-expanded="false">
+							How can I request a new browser?
+							<img class="faq__icon" src="./img/icon-arrow.svg" alt="">
+						</button>
+						<div class="faq__answer">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa voluptatibus reprehenderit
+							sed commodi impedit, magni ad, corporis aliquam rerum rem atque laborum praesentium nesciunt
+							nisi repellat? Magnam vel aperiam ullam!
+						</div>
+					</div>
+					<div class="faq__item">
+						<button class="faq__question" aria-expanded="false">
+							Is there a mobile app?
+							<img class="faq__icon" src="./img/icon-arrow.svg" alt="">
+						</button>
+						<div class="faq__answer">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos aliquid repellendus
+							eum aperiam tempore, fugit ratione dolorem molestiae quisquam ad minima tenetur porro ipsa
+							nihil ab sapiente repellat vero maxime.
+						</div>
+					</div>
+					<div class="faq__item">
+						<button class="faq__question" aria-expanded="false">
+							What about other Chromium browsers?
+							<img class="faq__icon" src="./img/icon-arrow.svg" alt="">
+						</button>
+						<div class="faq__answer">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum molestiae deleniti
+							corrupti adipisci amet impedit quasi eligendi eos, pariatur, perferendis veniam id quibusdam
+							deserunt numquam sequi, iusto quas velit animi.
+						</div>
+					</div>
+				</div>
+				<div class="faq__more">
+					<button class="button">More info</button>
+				</div>
+			</div>
+		</section>
+		<section class="subscribe">
+			<div class="container subscribe__inner">
+				<h4 class="subscribe__count">35.000+ Already joined</h4>
+				<h3 class="subscribe__title">Stay up-to-date with what we're doing</h3>
+				<div class="subscribe__form">
+					<input class="subscribe__input" name="emailName" id="emailName"
+						placeholder="Enter your email address"></input>
+					<button class="button button--secondary subscribe__button">Contact Us</button>
+				</div>
+			</div>
 		</section>
 	</main>
-	<footer class="">
-		<div class="">
-			<h1 class="">Bookmark</h1>
+	<footer class="footer" role="contentinfo">
+		<div class="container footer__inner">
+			<a href="#" class="footer__logo">
+				<img src="./img/logo-bookmark.svg" alt="Bookmark logo">
+			</a>
+
+			<ul class="footer__menu">
+				<li><a href="#">Features</a></li>
+				<li><a href="#">Pricing</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<ul class="footer__socials">
+				<li><a href="#"><img src="./img/icon-facebook.svg" alt="Facebook"></a></li>
+				<li><a href="#"><img src="./img/icon-twitter.svg" alt="Twitter"></a></li>
+			</ul>
 		</div>
-
-		<ul class="">
-			<li class="">features</li>
-			<li class="">pricing</li>
-			<li class="">contact</li>
-
-		</ul>
-		<ul class="">
-			<li class="">I</li>
-			<li class="">T</li>
-		</ul>
 	</footer>
+
+	<script>
+		const toggle = document.querySelector('.header__toggle');
+		const nav = document.querySelector('.header__nav');
+		toggle.addEventListener('click', () => {
+			nav.classList.toggle('header__nav--open');
+		});
+	</script>
+	<script>
+		const tabs = document.querySelectorAll('.features__tab');
+		const contents = document.querySelectorAll('.features__content');
+
+		tabs.forEach((tab, i) => {
+			tab.addEventListener('click', () => {
+				// activar tab
+				tabs.forEach(t => t.classList.remove('features__tab--active'));
+				tab.classList.add('features__tab--active');
+				// mostrar contingut
+				contents.forEach(c => c.style.display = 'none');
+				contents[i].style.display = 'flex';
+			});
+		});
+
+		// Inicia amb el primer activat
+		tabs[0].click();
+	</script>
+	<script>
+		document.querySelectorAll('.faq__question').forEach(btn => {
+			btn.addEventListener('click', () => {
+				btn.classList.toggle('open');
+			});
+		});
+	</script>
 </body>
 
 </html>
