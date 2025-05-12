@@ -29,7 +29,8 @@
 			</nav>
 			<button class="header__toggle" aria-label="Open menu">
 
-				<img src="./img/icon-hamburger.svg" alt="Menu">
+				<img class="header__icon header__icon--open" src="./img/icon-hamburger.svg" alt="Open menu">
+				<img class="header__icon header__icon--close" src="./img/icon-close.svg" alt="Close menu">
 			</button>
 		</div>
 	</header>
@@ -217,7 +218,8 @@
 				<h3 class="subscribe__title">Stay up-to-date with what we're doing</h3>
 				<div class="subscribe__form">
 					<input class="subscribe__input" name="emailName" id="emailName"
-						placeholder="Enter your email address"></input>
+						placeholder="Enter your email address" required type="email"></input>
+					<p class="subscribe__error">Whoops, make sure it's an email</p>
 					<button class="button button--secondary subscribe__button">Contact Us</button>
 				</div>
 			</div>
@@ -247,7 +249,8 @@
 		const toggle = document.querySelector('.header__toggle');
 		const nav = document.querySelector('.header__nav');
 		toggle.addEventListener('click', () => {
-			nav.classList.toggle('header__nav--open');
+			const isOpen = nav.classList.toggle('header__nav--open');
+			toggle.setAttribute('aria-expanded', isOpen);
 		});
 	</script>
 	<script>
