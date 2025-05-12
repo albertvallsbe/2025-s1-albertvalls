@@ -79,9 +79,13 @@ h2 {
     /* border: 1px solid var(--red); */
 }
 
-/* .button + .button {
-    margin-top: 1rem;
-} */
+.button:hover {
+    filter: brightness(0.9);
+}
+.button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
 
 @media screen and (min-width: 768px) {
     .button {
@@ -536,6 +540,7 @@ h2 {
 
 .faq__question.open .faq__icon {
     transform: translateY(-50%) rotate(180deg);
+    color: var(--red);
 }
 
 .faq__answer {
