@@ -58,35 +58,49 @@ h2 {
     font-weight: 400;
     border-radius: var(--border-radius);
     padding: 1rem;
-    background: var(--blue);
+    background-color: var(--blue);
     color: var(--white);
     max-width: 45%;
     font-size: 1.2rem;
     white-space: nowrap;
     text-align: center;
-
-    /* width: 100%;
-    font-size: 1rem;
-    padding: 1rem; */
-}
-
-.button--primary {
-    background: var(--gray);
-    color: var(--primary);
-}
-
-.button--secondary {
-    background: var(--red);
-    color: var(--white);
-    /* border: 1px solid var(--red); */
+    cursor: pointer;
 }
 
 .button:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--blue);
     filter: brightness(0.9);
 }
+
 .button:active {
     transform: translateY(2px);
     box-shadow: none;
+}
+
+.button--primary {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.button--primary:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    filter: brightness(0.9);
+}
+
+.button--secondary {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.button--secondary:hover {
+    background-color: var(--white);
+    color: var(--red);
+    border: 1px solid var(--red);
+    filter: brightness(0.9);
 }
 
 @media screen and (min-width: 768px) {
@@ -112,7 +126,7 @@ h2 {
     padding: 1rem 1.5rem;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 5;
 }
 
 .header__inner {
@@ -130,30 +144,25 @@ h2 {
 }
 
 .header__nav.header__nav--open {
-    /* display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    background: var(--white);
-    padding: 1.5rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); */
-
+    position: fixed;
+    inset: 0;
+    top: 0;
+    background: var(--primary-shadow);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding-top: 2rem;
+    padding: 3rem;
+    z-index: 6;
+}
 
-    position: fixed;
-
-    inset: 0;
-    background: var(--primary-shadow);
-    /* z-index: 20; */
+body.nav-open {
+    overflow: hidden;
 }
 
 .header__nav.header__nav--open .nav__list {
-    background: var(--white-shadow);
-    backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
     padding: 2rem 0;
     width: 90%;
@@ -176,7 +185,8 @@ h2 {
 .header__nav.header__nav--open .nav__link {
     color: var(--white);
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 300;
+    font-size: 2.5rem;
 }
 
 .nav__list {
@@ -220,15 +230,27 @@ h2 {
     border-radius: var(--border-radius);
 }
 
+.nav__logo {
+    margin-bottom: 3rem;
+}
+
+.nav__logo img {
+    height: 24px;
+}
+
 .header__toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 11;
 }
 
 .header__toggle img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
 
 .header__icon {
@@ -246,6 +268,12 @@ h2 {
 }
 .header__nav.header__nav--open + .header__toggle .header__icon--close {
     display: block;
+}
+
+.header__nav.header__nav--open .nav__logo img {
+    width: 320px;
+    height: auto;
+    filter: brightness(0) invert(1);
 }
 
 @media screen and (min-width: 768px) {
@@ -295,6 +323,10 @@ h2 {
     }
 
     .header__toggle {
+        display: none;
+    }
+
+    .logo__menu {
         display: none;
     }
 }
@@ -504,7 +536,6 @@ h2 {
     gap: 2rem;
     justify-items: center;
     padding: 1rem;
-    /* background-color: pink; */
 }
 
 .card {
@@ -573,6 +604,8 @@ h2 {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         margin: 0 auto;
+        max-width: 900px;
+        justify-items: center;
     }
 
     .card {
@@ -762,15 +795,23 @@ h2 {
     outline: none;
 }
 
+.subscribe__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .subscribe__error {
     display: none;
     color: var(--white);
     background-color: var(--red);
     font-size: 0.875rem;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem 0.5rem;
     margin-top: -0.9rem;
+    /* margin-top: 0.25rem; */
     text-align: left;
     z-index: 1;
+    border-radius: var(--border-radius);
 }
 
 .subscribe__button:active {
@@ -810,6 +851,7 @@ h2 {
     }
     .subscribe__button {
         width: auto;
+        max-height: 3.8rem;
         padding: 1rem 2rem;
     }
 }
