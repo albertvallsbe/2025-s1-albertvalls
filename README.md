@@ -11,6 +11,7 @@ Albert Valls
 3. [Tecnologia / Tech Stack](#3-tecnologia--tech-stack)
 4. [Demo en línia / Live Demo](#4-demo-en-línia--live-demo)
 5. [Repositori / Repository](#5-repositori--repository)
+6. [Instal·lació / Installation](#6-instal-lacio--installation)
 
 ---
 
@@ -56,3 +57,33 @@ This is a simple academic practice project built with HTML, CSS and minimal Java
 ## 5. Repositori / Repository
 
 **Github:** 👉 https://github.com/albertvallsbe/2025-s1-albertvalls
+
+---
+
+## 6. Installació / Installation
+
+**CAT:**
+
+_Segueix aquests passos per clonar el projecte i fer servir el live sever de VSCode._
+
+**EN:**
+
+_Follow these steps to clone the project and use de live server of VSCode._
+
+**Requeriments / Prerequisites**
+
+- Node.js
+
+### 1) Clonar el repositori / Clone the repository
+
+```bash
+git clone https://github.com/albertvallsbe/2025-s1-albertvalls.git
+```
+
+### 2) Entrar al directori del projecte / Navigate into the project directory
+
+```
+cd 2025-s1-albertvalls
+```
+
+### 3) Obre el live Server de VSCode / Open the Live Server of VSCode
